@@ -1,0 +1,16 @@
+/* 强制取消文档内容的反色滤镜 */
+#typst-app.invert-colors .typst-doc {
+  filter: none !important;
+}
+
+/* 强制取消图片的特殊反色处理（防止图片因为上面的规则变动而显示异常） */
+#typst-app.invert-colors .typst-image,
+#typst-app.invert-colors .typst-image:hover,
+#typst-app.invert-colors.normal-image .typst-image {
+  filter: none !important;
+}
+
+/* 强制背景色为白色（防止深色模式下背景依然是黑的） */
+#typst-app {
+  background-color: #ffffff !important;
+}
